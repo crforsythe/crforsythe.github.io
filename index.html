@@ -3,16 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Personal Website</title>
+  <script src="js/main.js"></script>
+  <title>Connor Forsythe</title>
   <style>
     /* CSS code goes here */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
+
+    .tab button {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+    }
+
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    .tabcontent.show {
+      display: block;
+    }
+
   </style>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   
 </head>
 <body>
   <header>
-    <h1>My Personal Website</h1>
+    <h1>Connor Forsythe</h1>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
@@ -28,7 +63,11 @@
   <main>
     <section id="about-me">
       <h2>About Me</h2>
-      <p>Insert your bio here.</p>
+      <p>Hi, I'm Connor Forsythe, a driven and enthusiastic Ph.D. candidate in Mechanical Engineering at Carnegie Mellon University. My research focuses on understanding the policy-related impacts of extended vehicle life, electric vehicle adoption, and transportation network companies. I completed my B.S. in Systems Engineering at The George Washington University, where I graduated summa cum laude.
+
+        I have a strong background in programming, with proficiency in Python, MATLAB, Stata, R, and Julia. Throughout my academic career, I've actively participated in both research and teaching roles, serving as a Graduate Research Assistant and Teaching Assistant at Carnegie Mellon University and as an Undergraduate Research Assistant at The George Washington University.
+
+        My research has been published in conference publications, and I'm currently working on several research projects that explore various aspects of transportation and policy. In my free time, I enjoy watching movies as well as listening to and playing music. Feel free to connect with me through email at connorforsythe@cmu.edu.</p>
     </section>
     <section id="experience">
       <h2>Experience</h2>
@@ -48,6 +87,27 @@
         <li>Insert your publications here.</li>
       </ul>
     </section>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'tab1')">Tab 1</button>
+      <button class="tablinks" onclick="openTab(event, 'tab2')">Tab 2</button>
+      <button class="tablinks" onclick="openTab(event, 'tab3')">Tab 3</button>
+    </div>
+
+    <div id="tab1" class="tabcontent">
+      <h3>Tab 1 Content</h3>
+      <p>This is the content for tab 1.</p>
+    </div>
+
+    <div id="tab2" class="tabcontent">
+      <h3>Tab 2 Content</h3>
+      <p>This is the content for tab 2.</p>
+    </div>
+
+    <div id="tab3" class="tabcontent">
+      <h3>Tab 3 Content</h3>
+      <p>This is the content for tab 3.</p>
+    </div>
+
   </main>
   <footer>
     <p>&copy; 2023 My Personal Website. All rights reserved.</p>
