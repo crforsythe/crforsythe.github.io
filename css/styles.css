@@ -3,13 +3,13 @@ header {
     position: relative;
 }
 
-.profile-picture {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 150px; /* Adjust the width as needed */
-    height: auto;
-}
+/*.profile-picture {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    width: 150px; !* Adjust the width as needed *!*/
+/*    height: auto;*/
+/*}*/
 
 /* CSS code goes here */
 .tab {
@@ -48,22 +48,22 @@ header {
     display: block;
 }
 
-.oval-frame {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: inline-block;
-    width: 200px; /* Adjust the width as needed */
-    height: 200px; /* Adjust the height as needed */
-    border-radius: 5%;
-    overflow: hidden;
-    border: 5px solid #000; /* Adjust the border color and thickness as needed */
-}
+/*.oval-frame {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    display: inline-block;*/
+/*    width: 200px; !* Adjust the width as needed *!*/
+/*    height: 200px; !* Adjust the height as needed *!*/
+/*    border-radius: 5%;*/
+/*    overflow: hidden;*/
+/*    border: 5px solid #000; !* Adjust the border color and thickness as needed *!*/
+/*}*/
 
-.oval-frame img{
-    width: 100%;
-    height: auto;
-}
+/*.oval-frame img{*/
+/*    width: 100%;*/
+/*    height: auto;*/
+/*}*/
 
 
 .navbar {
@@ -87,6 +87,13 @@ header {
     color: black;
 }
 
+@media (max-width: 600px) {
+    .oval-frame {
+        width: 150px;
+        height: 150px;
+    }
+}
+
 /* Content styles */
 .content {
     padding-top: 0px; /* Provide enough space below the navigation bar */
@@ -95,3 +102,43 @@ header {
 header h1{
     font-size: 64pt;
 }
+
+/* About Me container styles */
+.about-me-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; /* Aligns items to the start of the flex container */
+}
+
+.about-me-photo {
+    flex: 0 0 200px; /* Do not grow, do not shrink, and use 200px as the base width */
+    margin-right: 20px; /* Adds some space between the photo and the text */
+}
+
+.about-me-text {
+    flex: 1; /* Allows text to grow and fill the remaining space */
+}
+
+/* Ensure that the image fits within the container */
+.about-me-photo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .about-me-container {
+        flex-direction: column; /* Stacks the flex items vertically on smaller screens */
+    }
+
+    .about-me-photo, .about-me-text {
+        flex-basis: auto; /* Allow both the image and the text to adjust their width automatically */
+        max-width: 100%; /* Ensures they don't exceed the container's width */
+        margin-right: 0; /* Reset any right margin on smaller screens */
+    }
+
+    .about-me-photo {
+        margin-bottom: 20px; /* Adds some space between the photo and the text */
+    }
+}
+
