@@ -1,0 +1,117 @@
+@config "../../tailwind.config.mjs";
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-ink: 15 23 42;
+    --color-muted: 71 85 105;
+    --color-accent: 14 116 144;
+    --color-accent-strong: 9 88 110;
+    --color-surface: 255 255 255;
+    --color-wash: 244 246 248;
+    --color-border: 226 232 240;
+    --shadow-color: 15 23 42;
+    --radius-card: 18px;
+    --radius-pill: 999px;
+    --space-section: clamp(2.5rem, 6vw, 5rem);
+    --space-stack: clamp(1.5rem, 3vw, 2.25rem);
+    --font-sans: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+    --font-serif: "Source Serif 4", "Georgia", serif;
+  }
+
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    color: rgb(var(--color-ink));
+    background-color: rgb(var(--color-wash));
+    background-image:
+      radial-gradient(circle at top, rgba(14, 116, 144, 0.12), transparent 55%),
+      radial-gradient(circle at 20% 20%, rgba(15, 23, 42, 0.08), transparent 40%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: rgba(14, 116, 144, 0.2);
+  }
+
+  a {
+    color: rgb(var(--color-accent));
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px;
+    transition: color 200ms ease, text-decoration-color 200ms ease;
+  }
+
+  a:hover {
+    color: rgb(var(--color-accent-strong));
+    text-decoration-color: rgba(14, 116, 144, 0.6);
+  }
+
+  a:focus-visible {
+    outline: 2px solid rgba(14, 116, 144, 0.6);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .tab-button {
+    @apply inline-flex items-center justify-center rounded-pill border border-border/60 px-4 py-2 text-sm font-semibold text-muted transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:ring-offset-2 focus-visible:ring-offset-wash;
+  }
+
+  .tab-button:hover {
+    @apply border-border text-ink;
+  }
+
+  .tab-button.is-active {
+    @apply border-transparent bg-ink text-white shadow-soft;
+  }
+
+  .tab-panel {
+    @apply rounded-card border border-border/60 bg-surface/80 p-6 shadow-card backdrop-blur sm:p-8;
+  }
+
+  html.js .tab-panel {
+    display: none;
+  }
+
+  html.js .tab-panel.is-active {
+    display: block;
+  }
+
+  .section-title {
+    @apply font-serif text-2xl font-semibold text-ink;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .fade-up {
+    animation: fade-up 700ms ease both;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-up {
+      animation: none;
+    }
+  }
+}

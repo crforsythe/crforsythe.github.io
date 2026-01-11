@@ -1,0 +1,243 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Connor Forsythe, Ph.D.">
+  <Header />
+
+  <main id="main" class="mx-auto max-w-5xl px-6 pb-section pt-4 sm:px-8 sm:pt-6">
+    <section class="fade-up space-y-6" style="animation-delay: 120ms" data-tabs data-default-tab="about-me">
+      <div
+        class="flex flex-wrap gap-3 border-b border-border/60 pb-5"
+        role="tablist"
+        aria-label="Site sections"
+      >
+        <button
+          type="button"
+          class="tab-button is-active"
+          role="tab"
+          id="tab-about-me"
+          aria-controls="panel-about-me"
+          aria-selected="true"
+          tabindex="0"
+          data-tab="about-me"
+        >
+          About Me
+        </button>
+        <button
+          type="button"
+          class="tab-button"
+          role="tab"
+          id="tab-research"
+          aria-controls="panel-research"
+          aria-selected="false"
+          tabindex="0"
+          data-tab="research"
+        >
+          Research
+        </button>
+        <button
+          type="button"
+          class="tab-button"
+          role="tab"
+          id="tab-github"
+          aria-controls="panel-github"
+          aria-selected="false"
+          tabindex="0"
+          data-tab="github"
+        >
+          Code & Projects
+        </button>
+      </div>
+
+      <section
+        id="panel-about-me"
+        class="tab-panel is-active"
+        role="tabpanel"
+        tabindex="0"
+        aria-labelledby="tab-about-me"
+        data-tab-panel="about-me"
+      >
+        <div class="grid gap-6 md:grid-cols-[220px_1fr] md:items-start">
+          <div class="rounded-card border border-border/60 bg-surface p-2 shadow-soft">
+            <img
+              src="images/forsythe.png"
+              alt="Picture of Connor Forsythe"
+              class="h-auto w-full rounded-[calc(var(--radius-card)-6px)] object-cover"
+            />
+          </div>
+          <div class="space-y-4">
+            <h2 class="section-title">About Me</h2>
+            <p class="text-base leading-relaxed text-ink/90 sm:text-lg">
+              I’m Connor Forsythe, a Decision Scientist at Disney with a Ph.D. in Mechanical Engineering from Carnegie Mellon University. I completed a year-long postdoctoral appointment in CMU’s Engineering and Public Policy department, where my work examined how technology and policy shape transportation choices. I build models that translate complex data into decisions that improve products, operations, and customer outcomes, and I’m passionate about privacy-preserving AI technology.
+
+              My work combines discrete choice modeling, applied econometrics, and machine-learning workflows to forecast behavior, quantify tradeoffs, and evaluate interventions. I bring a strong programming toolkit—Python, MATLAB, Stata, R, SQL, and Julia—and a track record of delivering analytics that drive measurable impact.
+
+              I’m always happy to connect. You can reach me at <a href="mailto:connorrforsythe@gmail.com">connorrforsythe@gmail.com</a>, or view my publications on this site and my <a href="https://scholar.google.com/citations?user=9f-iocgAAAAJ&hl=en">Google Scholar page</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="panel-research"
+        class="tab-panel space-y-8"
+        role="tabpanel"
+        tabindex="0"
+        aria-labelledby="tab-research"
+        data-tab-panel="research"
+      >
+        <h2 class="section-title">Research</h2>
+
+        <div class="space-y-6">
+        <div class="space-y-3">
+          <h3 class="text-lg font-semibold text-ink">Journal Publications</h3>
+          <ul class="list-disc space-y-3 pl-5 text-base leading-relaxed text-ink/90">
+            <li><strong>Forsythe, C. R.</strong>, Gillingham, K. T., Michalek, J. J., & Whitefoot, K. S. (2023). Technology advancement is driving electric vehicle adoption. <em>Proceedings of the National Academy of Sciences of the United States of America</em>, 120(23), 1–7. <a href="https://doi.org/10.1073/pnas.2219396120">https://doi.org/10.1073/pnas.2219396120</a></li>
+            <li><strong>Forsythe, C. R.</strong>, Harper, C. D., & Michalek, J. J. (2024). Bringing home the bacon: Estimating willingness to pay for autonomous grocery delivery across U.S. households. <em>Transportation Research Interdisciplinary Perspectives</em>, 26. <a href="https://doi.org/10.1016/j.trip.2024.101118">https://doi.org/10.1016/j.trip.2024.101118</a></li>
+            <li><strong>Forsythe, C. R.</strong>, Jha, A., Michalek, J., & Whitefoot, K. (2025). Externalities of Policy-Induced Scrappage: The Case of Automotive Safety Inspections. <em>Journal of the Association of Environmental and Resource Economists</em>. <a href="https://doi.org/10.1086/739286">https://doi.org/10.1086/739286</a></li>
+            <li>Burns, A., <strong>Forsythe, C. R.</strong>, Michalek, J. J., & Whitefoot, K. S. (2025). Estimating the potential for dynamic parking reservation systems to increase delivery vehicle accommodation. <em>Transportation Research Part A: Policy and Practice</em>, 193. <a href="https://doi.org/10.1016/j.tra.2025.104380">https://doi.org/10.1016/j.tra.2025.104380</a></li>
+            <li><strong>Forsythe, C. R.</strong>, Gillingham, K. T., Michalek, J. J., & Whitefoot, K. S. (2025). Will Pickup Truck Buyers Go Electric? Accepted at <em>Transportation Research Part D: Transport and Environment</em>.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="text-lg font-semibold text-ink">Submitted to Journal</h3>
+          <ul class="list-disc space-y-3 pl-5 text-base leading-relaxed text-ink/90">
+            <li>Koling, A., Armanios, D., Michalek, J. J., <strong>Forsythe, C. R.</strong>, & Jha, A. (2026). Ride-Sharing the Wealth – Effects of Uber and Lyft on Jobs, Wages and Economic Growth. R&R at <em>Nature Cities</em>.</li>
+            <li>Vicente, J.P., <strong>Forsythe, C. R.</strong>, Gillingham, K.T., Michalek, J. J., & Whitefoot, K. S. (2025). Automotive Choice Models: A Systematic Review of the State of the Literature. Under review at <em>Renewable and Sustainable Energy Reviews</em>.</li>
+          </ul>
+        </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold text-ink">Works in Progress</h3>
+            <ul class="list-disc space-y-3 pl-5 text-base leading-relaxed text-ink/90">
+              <li><strong>Forsythe, C. R.</strong>, Arteaga, C., & Helveston, J. P. (2025). The Mixed Aggregate Preference Logit Model: A Machine Learning Approach to Modeling Unobserved Heterogeneity in Discrete Choice Analysis. <a href="http://arxiv.org/abs/2402.00184">[Working Paper]</a></li>
+              <li>Bruchon, M. B., <strong>Forsythe, C. R.</strong>, & Michalek, J. J. (2023). Should Ridesourcing Services Pool More Ride?</li>
+              <li>Bruchon, M. B., <strong>Forsythe, C. R.</strong>, Andreasan, C., Whitefoot, K. S., & Michalek, J. J. (2023). Does Congestion Pricing for Uber and Lyft Work? Effects of Chicago’s Downtown Zone Surcharge.</li>
+            </ul>
+          </div>
+
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold text-ink">Dissertation</h3>
+            <ul class="list-disc pl-5 text-base leading-relaxed text-ink/90">
+              <li><a href="https://kilthub.cmu.edu/articles/thesis/Econometric_Estimation_of_Consumer_Responses_to_Personal_Transportation_Policies_and_Technologies/24129579">Econometric Estimation of Consumer Responses to Personal Transportation Policies and Technologies</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="panel-github"
+        class="tab-panel space-y-8"
+        role="tabpanel"
+        tabindex="0"
+        aria-labelledby="tab-github"
+        data-tab-panel="github"
+      >
+        <div class="space-y-2">
+          <h3 class="section-title">Code & Projects</h3>
+        </div>
+
+        <div class="rounded-card border border-border/60 bg-surface/90 p-6 shadow-soft sm:p-8">
+          <div class="space-y-4">
+            <div class="flex flex-wrap items-center gap-4">
+              <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-border/60 bg-white">
+                <img
+                  src="/images/BonsAI-logo.webp"
+                  alt="BonsAI logo"
+                  class="h-9 w-9 object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <div class="space-y-1">
+                <h4 class="text-xl font-semibold text-ink">BonsAI</h4>
+                <a
+                  href="https://bonsaicorporate-ux.github.io"
+                  class="text-xs font-semibold uppercase tracking-[0.2em] text-accent"
+                >
+                  Project site
+                </a>
+              </div>
+            </div>
+            <p class="text-base leading-relaxed text-ink/90 sm:text-lg">
+              BonsAI is a local-first AI desktop app that runs entirely on your own computer.
+              It lets you interact with modern language models without sending your data to the cloud, without accounts, and without third-party servers in the loop.
+            </p>
+            <p class="text-base leading-relaxed text-ink/90 sm:text-lg">
+              The goal is simple: give people the usefulness of AI while keeping control, privacy, and ownership of their data in their own hands. Everything runs locally, and nothing leaves your machine unless you explicitly choose to share it.
+            </p>
+            <p class="text-base leading-relaxed text-ink/90 sm:text-lg">
+              Right now, BonsAI is in alpha and supports Apple Silicon Macs only. It’s still early, evolving quickly, and very much a personal, in-progress project.
+            </p>
+            <p class="text-base leading-relaxed text-ink/90 sm:text-lg">
+              I built BonsAI because I wanted a tool that felt trustworthy, transparent, and respectful of users — something that worked for me personally before it worked for anyone else.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <p class="text-sm uppercase tracking-[0.2em] text-muted">Selected package contributions</p>
+          <ul class="list-disc space-y-2 pl-5 text-sm leading-relaxed text-muted sm:text-base">
+            <li><a href="https://xlogit.readthedocs.io/en/latest/">xlogit</a>: a Python choice modelling package for quick estimation of both simple and mixed logit models.</li>
+            <li><a href="https://jhelvy.github.io/logitr/index.html">logitr</a>: an R choice modelling package for estimation of both simple and mixed logit models.</li>
+          </ul>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <Footer />
+
+  <script is:inline>
+    const tabsRoot = document.querySelector("[data-tabs]");
+    if (tabsRoot) {
+      const buttons = Array.from(tabsRoot.querySelectorAll("[data-tab]"));
+      const panels = Array.from(tabsRoot.querySelectorAll("[data-tab-panel]"));
+      const defaultTab = tabsRoot.getAttribute("data-default-tab");
+
+      const activate = (tabId, shouldFocus) => {
+        if (!tabId) return;
+        buttons.forEach((button) => {
+          const isActive = button.getAttribute("data-tab") === tabId;
+          button.classList.toggle("is-active", isActive);
+          button.setAttribute("aria-selected", isActive ? "true" : "false");
+          button.setAttribute("tabindex", isActive ? "0" : "-1");
+          if (isActive && shouldFocus) {
+            button.focus();
+          }
+        });
+        panels.forEach((panel) => {
+          const isActive = panel.getAttribute("data-tab-panel") === tabId;
+          panel.classList.toggle("is-active", isActive);
+          panel.setAttribute("aria-hidden", isActive ? "false" : "true");
+        });
+      };
+
+      buttons.forEach((button, index) => {
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          activate(button.getAttribute("data-tab"), true);
+        });
+
+        button.addEventListener("keydown", (event) => {
+          const keys = ["ArrowLeft", "ArrowRight", "Home", "End"];
+          if (!keys.includes(event.key)) return;
+          event.preventDefault();
+
+          let nextIndex = index;
+          if (event.key === "ArrowRight") nextIndex = (index + 1) % buttons.length;
+          if (event.key === "ArrowLeft") nextIndex = (index - 1 + buttons.length) % buttons.length;
+          if (event.key === "Home") nextIndex = 0;
+          if (event.key === "End") nextIndex = buttons.length - 1;
+
+          activate(buttons[nextIndex]?.getAttribute("data-tab"), true);
+        });
+      });
+
+      activate(defaultTab || buttons[0]?.getAttribute("data-tab"), false);
+    }
+  </script>
+</BaseLayout>
